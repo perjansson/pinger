@@ -31,19 +31,19 @@ try {
 
 function sendEmail(message) {
     var server  = email.server.connect({
-       user:        "sjovaderprognos@gmail.com", 
-       password:    "sjovaderprognos1", 
-       host:        "smtp.gmail.com", 
+       user:        "sjovaderprognos@gmail.com",
+       password:    "************", 
+       host:        "smtp.gmail.com",
        ssl:         true
     });
 
     server.send({
-        text:    message, 
-        from:    "Sjövaderprognos pinger <sjovaderprognos@gmail.com>", 
+        text:    message,
+        from:    "Sjövaderprognos pinger <sjovaderprognos@gmail.com>",
         to:      "Per Jansson <per.r.jansson@gmail.com>",
         subject: "Meddelande från Sjövaderprognos pinger "
-    }, function(err, message) { 
-        log(err || JSON.stringify(message)); 
+    }, function(err, message) {
+        log(err || JSON.stringify(message));
     });
 }
 
